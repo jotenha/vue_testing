@@ -2,9 +2,13 @@ Vue.createApp({
     data() {
         //gets called when created
         return {
-            firstName: 'Pedro'
+            firstName: 'Pedro',
+            lastName: 'Savian'
         }
     }
 }).mount('#app')
 //what element it controls
-//expressions: evaluates to a single value, 
+//expressions: evaluates to a single value, only expressions are allowed on the {} in the html
+    //no var declarations / no code behinde de scenes
+    //it should be created on the template where its mounted on --> app
+    //data MUST be inside the data function
