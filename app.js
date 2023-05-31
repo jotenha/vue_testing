@@ -10,6 +10,10 @@ const vm = Vue.createApp({
     //. class selector
     // vm= viewModel
 }).mount('#app')
+
+setTimeout(()=> {
+    vm.firstName = 'Pietro'
+},2000)
 //what element it controls
 //expressions: evaluates to a single value, only expressions are allowed on the {} in the html
     //no var declarations / no code behinde de scenes
