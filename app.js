@@ -1,4 +1,4 @@
-Vue.createApp({
+const vm = Vue.createApp({
     data() {
         //gets called when created
         return {
@@ -8,6 +8,7 @@ Vue.createApp({
     }
     //# id selector
     //. class selector
+    // vm= viewModel
 }).mount('#app')
 //what element it controls
 //expressions: evaluates to a single value, only expressions are allowed on the {} in the html
