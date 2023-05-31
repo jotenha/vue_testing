@@ -15,7 +15,7 @@ Vue.createApp({
     //it should be created on the template where its mounted on --> app
     //data MUST be inside the data function
 
-Vue.createApp({
+/*Vue.createApp({
         data() {
             //gets called when created
             return {
@@ -23,4 +23,5 @@ Vue.createApp({
                 lastName: 'Rodrigues'
             }
         }
-}).mount('#secondApp')
+}).mount('#secondApp')*/
+// this is usually not commum.
