@@ -21,7 +21,8 @@ const vm = Vue.createApp({
             this.age++
         },
         updateLastName(msg,event){
-            event.preventDefault()
+            //event.preventDefault()
+            // removed because it now uses event modfiers .prevent
             console.log(msg)
             this.lastName = event.target.value
         }

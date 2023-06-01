@@ -22,7 +22,7 @@
         <input type="text" v-model="firstName"/>
       
         <label>Last Name</label>
-        <input type="text" :value="lastName" @input="updateLastName('Last name event triggered!',$event)"/>
+        <input type="text" :value="lastName" @input.prevent="updateLastName('Last name event triggered!',$event)"/>
         <!--this method gives more control over the update function -->
 
         <button type="button" @click="increment()">Increment</button>
