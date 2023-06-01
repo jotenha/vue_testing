@@ -4,7 +4,8 @@ const vm = Vue.createApp({
         return {
             firstName: 'Pedro',
             lastName: 'Savian',
-            url: 'https://google.com'
+            url: 'https://google.com',
+            rawUrl: `<a href ="url" target="_blank">Google</a>`
         }
     },
     //# id selector
