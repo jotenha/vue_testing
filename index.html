@@ -20,7 +20,11 @@
       <hr /> 
         <label>First Name</label>
         <input type="text" v-model="firstName"/>
-      
+
+        <label>Middle Name</label>
+        <input type="text" @keyup.enter="updateMiddleName($event)"/>
+        <!--use keycode.info for more keys-->
+
         <label>Last Name</label>
         <input type="text" :value="lastName" @input.prevent="updateLastName('Last name event triggered!',$event)"/>
         <!--this method gives more control over the update function -->

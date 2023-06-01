@@ -3,6 +3,7 @@ const vm = Vue.createApp({
         //gets called when created
         return {
             firstName: 'Pedro',
+            middleName: '',
             lastName: 'Savian',
             url: 'https://google.com',
             rawUrl: `<a href ="url" target="_blank">Google</a>`,
@@ -15,7 +16,7 @@ const vm = Vue.createApp({
     methods: {
         //functions for appf
         fullName() {
-            return `${this.firstName} ${this.lastName.toUpperCase()}` 
+            return `${this.firstName} ${this.middleName} ${this.lastName.toUpperCase()}` 
         },
         increment(){
             this.age++
@@ -25,6 +26,9 @@ const vm = Vue.createApp({
             // removed because it now uses event modfiers .prevent
             console.log(msg)
             this.lastName = event.target.value
+        },
+        updateMiddleName(event){
+            this.middleName = event.target.value
         }
     }
     //methods are functions that you can use inside you VIEW instance or TEMPLATE functions
