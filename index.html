@@ -23,6 +23,7 @@
       
         <label>Last Name</label>
         <input type="text" :value="lastName" @input="updateLastName($event)"/>
+        <!--this method gives more control over the update function-->
 
         <button type="button" @click="increment()">Increment</button>
         <button type="button" @click="age--">Decrement</button>
