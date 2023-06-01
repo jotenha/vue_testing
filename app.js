@@ -5,15 +5,26 @@ const vm = Vue.createApp({
             firstName: 'Pedro',
             lastName: 'Savian'
         }
-    }
+    },
     //# id selector
     //. class selector
     // vm= viewModel
+    methods: {
+        //functions for appf
+        fullName() {
+            return `${this.firstName} ${this.lastName.toUpperCase()}` 
+        }
+    }
+    //methods are functions that you can use inside you VIEW instance or TEMPLATE functions
 }).mount('#app')
 
-setTimeout(()=> {
+/*setTimeout(()=> {
     vm.firstName = 'Pietro'
-},2000)
+    //vm.$data.firstName
+    //vue proxy this to getter and setters
+},2000)*/
+
+
 //what element it controls
 //expressions: evaluates to a single value, only expressions are allowed on the {} in the html
     //no var declarations / no code behinde de scenes
