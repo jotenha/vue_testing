@@ -19,7 +19,9 @@
       <p>{{age}}</p>
       <hr /> 
         <label>First Name</label>
-        <input type="text" v-model="firstName"/>
+        <input type="text" v-model.lazy="firstName"/>
+        <!--trim removes excess white spaces-->
+        <!--lazy delay the changes until the user is done changeing-->
 
         <label>Middle Name</label>
         <input type="text" @keyup.enter="updateMiddleName($event)"/>
@@ -28,6 +30,9 @@
         <label>Last Name</label>
         <input type="text" :value="lastName" @input.prevent="updateLastName('Last name event triggered!',$event)"/>
         <!--this method gives more control over the update function -->
+
+        <label>Age</label>
+        <input type="number" v-model.number="age"/>
 
         <button type="button" @click="increment()">Increment</button>
         <button type="button" @click="age--">Decrement</button>
