@@ -5,7 +5,8 @@ const vm = Vue.createApp({
             firstName: 'Pedro',
             lastName: 'Savian',
             url: 'https://google.com',
-            rawUrl: `<a href ="url" target="_blank">Google</a>`
+            rawUrl: `<a href ="url" target="_blank">Google</a>`,
+            age: 20
         }
     },
     //# id selector
@@ -15,6 +16,9 @@ const vm = Vue.createApp({
         //functions for appf
         fullName() {
             return `${this.firstName} ${this.lastName.toUpperCase()}` 
+        },
+        increment(){
+            this.age++
         }
     }
     //methods are functions that you can use inside you VIEW instance or TEMPLATE functions
