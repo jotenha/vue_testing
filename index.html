@@ -12,10 +12,14 @@
       <p>{{ fullName() }}  </p>
       <hr /> 
         <label>First Name</label>
-        <input type="text"/>
+        <input type="text" v-model="firstName"/>
       
         <label>Last Name</label>
-        <input type="text"/>
+        <input type="text" v-model="lastName"/>
+        
+        <!--using directives for two-way data binding-->
+        <!--v-model keep track of changes and updates it-->
+        <!--REACTIVITY = any changes to the data is reclected on the page-->
     </div>
     <!--not ideial to write complex expression inside templates html files - they should be done in the js-->
     
