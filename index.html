@@ -12,6 +12,8 @@
       <p>{{ fullName() }}  </p>
       <p><a :href ="url" target="_blank">Google</a></p>
       <!--<p><a v-bind:href ="url" target="_blank">Google</a></p>-->
+      <!--SHORTHAND :-->
+      
       <p v-html="rawUrl"></p>
       <!--directive to output raw html--not safe practice tho -->
       <p>{{age}}</p>
@@ -22,8 +24,11 @@
         <label>Last Name</label>
         <input type="text" v-model="lastName"/>
 
-        <button type="button" v-on:click="increment()">Increment</button>
-        <button type="button"v-on:click="age--">Decrement</button>
+        <button type="button" @click="increment()">Increment</button>
+        <button type="button" @click="age--">Decrement</button>
+        <!--<button type="button"v-on:click="age--">Decrement</button>-->
+        <!--SHORTHAND @-->
+
         <!--use of v-on to listen to events-->
 
         <!--using directives for two-way data binding-->
