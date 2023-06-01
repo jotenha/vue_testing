@@ -3,7 +3,8 @@ const vm = Vue.createApp({
         //gets called when created
         return {
             firstName: 'Pedro',
-            lastName: 'Savian'
+            lastName: 'Savian',
+            url: 'https://FACEBOOK.com'
         }
     },
     //# id selector
