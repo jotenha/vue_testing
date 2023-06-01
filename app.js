@@ -15,9 +15,6 @@ const vm = Vue.createApp({
     // vm= viewModel
     methods: {
         //functions for appf
-        fullName() {
-            return `${this.firstName} ${this.middleName} ${this.lastName.toUpperCase()}` 
-        },
         increment(){
             this.age++
         },
@@ -30,6 +27,13 @@ const vm = Vue.createApp({
         updateMiddleName(event){
             this.middleName = event.target.value
         }
+    },
+    computed: { //must always return a value AND CANNOT PASS DATA!!!
+        fullName() {
+            return `${this.firstName} ${this.middleName} ${this.lastName.toUpperCase()}` 
+        }
+        //doesnt get called everytime a methoed is called.
+        // computed needs to remove () back in the html
     }
     //methods are functions that you can use inside you VIEW instance or TEMPLATE functions
 }).mount('#app')
