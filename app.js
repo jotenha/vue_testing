@@ -34,6 +34,16 @@ const vm = Vue.createApp({
         }
         //doesnt get called everytime a methoed is called.
         // computed needs to remove () back in the html
+    },
+    watch:{
+        //any property on view
+        age(newVal,oldVal){
+            console.log(newVal)
+            console.log(oldVal)
+            setTimeout(() => {
+                this.age=30
+            }, 3000);
+        }
     }
     //methods are functions that you can use inside you VIEW instance or TEMPLATE functions
 }).mount('#app')
