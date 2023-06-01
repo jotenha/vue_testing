@@ -19,6 +19,9 @@ const vm = Vue.createApp({
         },
         increment(){
             this.age++
+        },
+        updateLastName(event){
+            this.lastName = event.target.value
         }
     }
     //methods are functions that you can use inside you VIEW instance or TEMPLATE functions
